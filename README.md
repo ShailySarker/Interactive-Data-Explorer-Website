@@ -62,8 +62,8 @@ https://interactive-data-explorer-website.vercel.app/
 
     - Implement proper loading and error states
 
-    - Structure your code with reusable components
-    
+    - Structure my code with reusable components
+
     - Handle edge cases (no results, API errors, etc.)
 
 # Run
