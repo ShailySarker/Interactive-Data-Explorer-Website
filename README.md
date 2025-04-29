@@ -1,12 +1,81 @@
-# React + Vite
+# Project Name: Interactive Data Explorer Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Website Link:
+https://interactive-data-explorer-website.vercel.app/
 
-Currently, two official plugins are available:
+# Overview:
+​The Interactive Data Explorer is a responsive React application that enables users to browse, search, and filter the first 150 Pokémon using data from the PokéAPI. Built with ReactJS, Axios, and styled using Tailwind CSS, it features real-time search by name, type-based filtering, and displays each Pokémon's name, image, types, and ID in a card layout. The application includes proper loading and error handling states, ensuring a smooth user experience across both desktop and mobile devices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Technologies & Technical Stack:
 
-## Expanding the ESLint configuration
+** Frontend **
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+    - React.js (UI components, state management)
+
+    - Tailwind CSS (Styling)
+
+    - Axios (API requests)
+
+    - React Router (Navigation)
+
+** DevOps & Tools **
+
+    - Vite (Frontend build tool)
+
+    - Postman(API testing)
+
+    - Vercel (Frontend Deploy)
+    
+    - Git/GitHub (Version control)
+
+# Key Features
+
+** 1. Data Fetching **
+
+    - Fetch the first 150 Pokémon from the PokeAPI
+
+    - Display each Pokémon in a card layout showing:    
+        - Name
+        - Image (sprite)
+        - Type(s)
+        - ID number
+
+** 2. Search Functionality **
+
+    - Implement a search input that filters Pokémon by name in real-time
+
+    - Add a filter dropdown to filter Pokémon by type (Fire, Water, Grass, etc.)
+
+    - Show appropriate loading and empty states
+
+** UI/UX **
+
+    - Create a responsive design that works on both desktop, tab and mobile devices
+
+    - Include a simple header with the application name
+
+    - Style the application with Tailwind CSS
+
+** Technical Requirements **
+
+    - Use functional components with React Hooks
+
+    - Implement proper loading and error states
+
+    - Structure your code with reusable components
+    
+    - Handle edge cases (no results, API errors, etc.)
+
+# Run
+
+## Clone this repository
+$ git clone https://github.com/ShailySarker/Interactive-Data-Explorer-Website  
+
+## Go into the repository
+$ cd Interactive-Data-Explorer-Website
+
+## Install dependencies
+$ npm install
+
+## Run the app
+$ npm run dev
