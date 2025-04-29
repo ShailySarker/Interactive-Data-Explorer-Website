@@ -64,7 +64,7 @@ const Home = () => {
         );
 
     return (
-        <div className="container mx-auto xl:px-20 lg:px-14 md:px-10 px-5 bg-[#A21D3C]/20">
+        <div className="container mx-auto xl:px-20 lg:px-14 md:px-10 px-5 bg-[#A21D3C]/20 xl:pb-24 lg:pb-20 md:pb-16 pb-10">
             <div className="flex flex-col md:flex-row justify-between items-center md:gap-0 gap-3 pt-4 xl:pb-6 md:pb-5 pb-4">
                 <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
                 <TypeFilter
