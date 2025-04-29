@@ -4,7 +4,7 @@ const TypeFilter = ({ types, selectedType, setSelectedType }) => (
     <select
         value={selectedType}
         onChange={(e) => setSelectedType(e.target.value)}
-        className="border-2 border-[#A21D3C] rounded-xl shadow-md px-4 py-2"
+        className="bg-white border-2 border-[#A21D3C] rounded-xl shadow-md px-4 py-2"
     >
         <option value="all">All Types</option>
         {types.map((type) => (
