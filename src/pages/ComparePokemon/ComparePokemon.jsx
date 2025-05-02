@@ -93,11 +93,11 @@ const ComparePokemon = () => {
 
             <div className="flex justify-center xl:gap-20 lg:gap-14 md:gap-8 gap-2 mt-12">
                 <div>
-                    <div className="xl:p-12 lg:p-8 md:p-6 p-4 border-2 border-[#A21D3C] rounded-xl bg-white">
-                        {loading1 && <p className='xl:py-56 lg:py-48 md:py-52 text-center font-medium xl:text-lg text-base italic'>Loading Pokémon 1...</p>}
-                        {error1 && <p className="xl:py-56 lg:py-48 md:py-5 text-red-500 font-medium italic">{error1}</p>}
-                        {data1 && (
-                            <div className=''>
+                    {loading1 && <p className='xl:p-12 lg:p-8 md:p-6 p-4 border-2 border-[#A21D3C] rounded-xl bg-white xl:py-56 lg:py-48 md:py-52 text-center font-medium xl:text-lg text-base italic'>Loading Pokémon 1...</p>}
+                    {error1 && <p className="xl:p-12 lg:p-8 md:p-6 p-4 border-2 border-[#A21D3C] rounded-xl bg-white xl:py-56 lg:py-48 md:py-5 text-red-500 font-medium italic">{error1}</p>}
+                    {data1 && (
+                        <div className=''>
+                            <div className='xl:p-12 lg:p-8 md:p-6 p-4 border-2 border-[#A21D3C] rounded-xl bg-white'>
                                 <img className='mx-auto xl:w-52 xl:h-52 lg:w-48 lg:h-48 md:w-44 md:h-44 w-28 h-28' src={data1?.sprites?.front_default} alt={data1?.name} />
                                 <h3 className="mb-4 xl:text-2xl md:text-xl text-lg font-semibold capitalize text-center">{data1?.name}</h3>
                                 <p className='xl:text-xl md:text-lg text-base'><span className='font-semibold'>Stats: </span> </p>
@@ -105,15 +105,15 @@ const ComparePokemon = () => {
                                     {renderStats(data1?.stats)}
                                 </p>
                             </div>
-                        )}
-                    </div>
-                    <p className='text-center xl:text-lg text-base italic font-bold mt-3'>Pokémon 1</p>
+                            <p className='text-center xl:text-lg text-base italic font-bold mt-3'>Pokémon 1</p>
+                        </div>
+                    )}
                 </div>
                 <div>
-                    <div className="xl:p-12 lg:p-8 md:p-6 p-4 border-2 border-[#A21D3C] rounded-xl bg-white">
                     {loading2 && <p className='xl:py-56 lg:py-48 md:py-52 text-center font-medium xl:text-lg text-base italic'>Loading Pokémon 2...</p>}
                     {error2 && <p className="text-red-500 xl:py-56 lg:py-48 md:py-5 font-medium italic">{error2}</p>}
-                        {data2 && (
+                    {data2 && (
+                        <div className='xl:p-12 lg:p-8 md:p-6 p-4 border-2 border-[#A21D3C] rounded-xl bg-white'>
                             <div className=''>
                                 <img className='mx-auto xl:w-52 xl:h-52 lg:w-48 lg:h-48 md:w-44 md:h-44 w-28 h-28' src={data2?.sprites?.front_default} alt={data2?.name} />
                                 <h3 className="mb-4 xl:text-2xl md:text-xl text-lg font-semibold capitalize text-center">{data2?.name}</h3>
@@ -122,9 +122,9 @@ const ComparePokemon = () => {
                                     {renderStats(data2?.stats)}
                                 </p>
                             </div>
-                        )}
-                    </div>
-                    <p className='text-center xl:text-lg text-base italic font-bold mt-3'>Pokémon 2</p>
+                            <p className='text-center xl:text-lg text-base italic font-bold mt-3'>Pokémon 2</p>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
