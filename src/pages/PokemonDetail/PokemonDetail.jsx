@@ -44,8 +44,8 @@ const PokemonDetail = () => {
         fetchPokemonDetail();
     }, [id]);
 
-    if (loading) return <p className="text-center xl:h-[550px] lg:h-[400px] md:h-[500px] h-[300px] flex justify-center items-center font-semibold xl:text-2xl md:text-xl text-lg">Loading...</p>;
-    if (!pokemon) return <p className="text-center xl:h-[550px] lg:h-[400px] md:h-[500px] h-[300px] flex justify-center items-center font-semibold xl:text-2xl md:text-xl text-lg text-red-500">Pokémon not found.</p>;
+    if (loading) return <p className="italic text-center xl:h-[550px] lg:h-[400px] md:h-[500px] h-[300px] flex justify-center items-center font-semibold xl:text-2xl md:text-xl text-lg">Loading...</p>;
+    if (!pokemon) return <p className="italic text-center xl:h-[550px] lg:h-[400px] md:h-[500px] h-[300px] flex justify-center items-center font-semibold xl:text-2xl md:text-xl text-lg text-red-500">Pokémon not found.</p>;
 
     return (
         <div className="xl:px-20 lg:px-14 md:px-7 px-5 bg-[#A21D3C]/20 xl:pt-5 pt-4 xl:pb-24 lg:pb-20 md:pb-16 pb-10 flex flex-col xl:gap-5 lg:gap-3 md:gap-3">
@@ -89,7 +89,8 @@ const PokemonDetail = () => {
                 </p>
             </div>
             <p className='xl:text-xl md:text-lg text-base md:mt-0 mt-3'><span className='font-semibold'>Evolution Chain: </span>
-                {evolutionChain.join(' → ')}
+                {/* {evolutionChain.join(' → ')} */}
+                <span className='italic font-extrabold text-[#A21D3C]'>{evolutionChain.join(' → ')}</span>
             </p>
         </div>
     );

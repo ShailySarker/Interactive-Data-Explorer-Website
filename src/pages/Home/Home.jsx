@@ -56,10 +56,10 @@ const Home = () => {
     } = usePagination(filteredPokemon, itemsPerPage);
 
     if (loading)
-        return <p className="text-center xl:h-[550px] lg:h-[400px] md:h-[500px] h-[300px] flex justify-center items-center font-semibold xl:text-2xl md:text-xl text-lg">Loading Pokémon data...</p>;
+        return <p className="italic text-center xl:h-[550px] lg:h-[400px] md:h-[500px] h-[300px] flex justify-center items-center font-semibold xl:text-2xl md:text-xl text-lg">Loading Pokémon data...</p>;
     if (error)
         return (
-            <p className="text-center text-red-500 xl:h-[550px] lg:h-[400px] md:h-[500px] h-[300px] flex justify-center items-center font-semibold xl:text-2xl md:text-xl text-lg">
+            <p className="italic text-center text-red-500 xl:h-[550px] lg:h-[400px] md:h-[500px] h-[300px] flex justify-center items-center font-semibold xl:text-2xl md:text-xl text-lg">
                 Error fetching Pokémon data.
             </p>
         );
