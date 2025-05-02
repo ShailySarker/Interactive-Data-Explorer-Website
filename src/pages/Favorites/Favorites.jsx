@@ -6,7 +6,7 @@ const Favorites = () => {
     const { favorites } = useFavorites();
 
     return (
-        <div className="xl:px-20 lg:px-14 md:px-7 px-5 xl:pt-5 pt-4 xl:pb-24 lg:pb-20 md:pb-16 pb-10">
+        <div className="xl:px-20 lg:px-14 md:px-7 px-5 xl:pt-5 pt-4 xl:pb-24 lg:pb-20 md:pb-16 pb-10 bg-[#A21D3C]/20">
             <h2 className="xl:text-3xl lg:text-2xl text-xl font-semibold mb-4">Favorite Pokémon</h2>
             {favorites?.length === 0 ? (
                 <p className="italic text-center xl:h-[550px] lg:h-[400px] md:h-[500px] h-[300px] flex justify-center items-center font-semibold xl:text-2xl md:text-xl text-lg">No favorite Pokémon yet.</p>
