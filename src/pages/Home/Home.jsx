@@ -55,7 +55,7 @@ const Home = () => {
         maxPage,
         jump,
     } = usePagination(filteredPokemon, itemsPerPage);
-
+    
     if (loading)
         return <p className="italic text-center xl:h-[550px] lg:h-[400px] md:h-[500px] h-[300px] flex justify-center items-center font-semibold xl:text-2xl md:text-xl text-lg">Loading Pokémon data...</p>;
     if (error)
@@ -88,16 +88,6 @@ const Home = () => {
                                 <option value={20}>20</option>
                                 <option value={50}>50</option>
                             </select>
-                        </div>
-                    </div>
-                    <div className="flex flex-col justify-between items-center md:gap-0 gap-3 pt-4 xl:pb-6 md:pb-5 pb-0">
-                    </div>
-                    <div className="flex flex-col md:flex-row justify-between items-center md:gap-0 gap-3 pt-4 xl:pb-6 md:pb-5 pb-0">
-                        <div className="xl:w-[75%] lg:w-1/3 md:w-[40%] w-[90%]">
-
-                        </div>
-                        <div className="xl:w-[23.5%] lg:w-1/3 md:w-[40%] w-[90%] flex flex-row items-center">
-
                         </div>
                     </div>
                 </div>

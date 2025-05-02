@@ -31,12 +31,12 @@ const RandomPokemon = () => {
 
             {randomPokemon && (
                 <div className="flex flex-col xl:gap-5 items-center lg:gap-3 md:gap-3 xl:my-10 mt-6">
-                    <div className='flex items-center justify-center xl:gap-8 lg:gap-7 md:gap-6 gap-1'>
-                        <div className='md:w-auto w-full'>
+                    <div className='flex items-center justify-center xl:gap-8 lg:gap-7 md:gap-6 gap-2'>
+                        <div className='md:w-auto w-[50%]'>
                             <img
                                 src={randomPokemon?.sprites?.front_default}
                                 alt={randomPokemon?.name}
-                                className="mx-auto xl:w-44 xl:h-44 lg:w-40 lg:h-40 md:w-40 md:h-40 w-32 h-32 border-2 border-[#A21D3C] rounded-xl xl:p-2 lg:p-3 p-2 mb-4 bg-white shadow-md"
+                                className="mx-auto xl:w-44 xl:h-44 lg:w-40 lg:h-40 md:w-40 md:h-40 w-32 h-32 border-2 border-[#A21D3C] rounded-xl xl:p-2 lg:p-3 p-2 md:mb-4 mb-3 bg-white shadow-md"
                             />
                             <div className='flex justify-center items-center xl:gap-4 lg:gap-[14px] md:gap-3 gap-1'>
                                 <h2 className="xl:text-2xl md:text-xl text-lg font-bold capitalize text-center">{randomPokemon?.name}</h2>
@@ -45,7 +45,7 @@ const RandomPokemon = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className='md:w-auto w-full flex flex-col md:gap-3 gap-2 xl:text-lg md:text-base text-sm'>
+                        <div className='md:w-auto w-[50%] flex flex-col md:gap-3 gap-2 xl:text-lg md:text-base text-sm'>
                             <p><span className='font-semibold'>ID: </span>{randomPokemon?.id}</p>
                             <p><span className='font-semibold'>Height: </span>{randomPokemon?.height}</p>
                             <p><span className='font-semibold'>Weight: </span>{randomPokemon?.weight}</p>

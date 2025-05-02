@@ -5,6 +5,7 @@ import LandingPage from '../pages/LandingPage/LandingPage';
 import MainLayout from '../layouts/MainLayout';
 import PokemonDetail from '../pages/PokemonDetail/PokemonDetail';
 import Favorites from '../pages/Favorites/Favorites';
+import ComparePokemon from '../pages/ComparePokemon/ComparePokemon';
 
 
 const Routers = () => {
@@ -29,6 +30,10 @@ const Routers = () => {
                 <Route
                     path="/favorites"
                     element={<Favorites />}
+                />
+                <Route
+                    path="/compare"
+                    element={<ComparePokemon />}
                 />
             </Route>
         </Routes>
