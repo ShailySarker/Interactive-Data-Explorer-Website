@@ -18,19 +18,20 @@ const PokemonCard = ({ pokemon }) => {
             <img
                 src={pokemon?.sprites?.front_default}
                 alt={pokemon?.name}
-                className="mx-auto xl:w-36 xl:h-36 lg:w-28 lg:h-28 md:w-32 md:h-32 w-24 h-24 "
+                className="mx-auto xl:w-28 xl:h-28 lg:w-24 lg:h-24 md:w-24 md:h-24 w-20 h-20 "
             />
-            <h3 className="text-lg font-bold capitalize">{pokemon?.name}</h3>
-            <p>ID: {pokemon?.id}</p>
-            <p className='font-semibold italic text-gray-800'>
+            <h3 className="xl:text-lg font-bold capitalize">{pokemon?.name}</h3>
+            <p className='
+            xl:text-base text-sm'>ID: {pokemon?.id}</p>
+            <p className='font-bold italic text-gray-500 xl:text-sm text-xs'>
                 Types:{' '}
                 {pokemon?.types?.map((type) => type?.type?.name).join(', ')}
             </p>
-            <div className="flex justify-between mt-6">
-                <Link to={`/pokemon/${pokemon?.id}`} className="text-[#A21D3C] hover:bg-[#A21D3C] hover:text-white font-medium border-2 border-[#A21D3C] xl:px-4 px-3 py-1 rounded-xl">
+            <div className="flex justify-between xl:mt-6 lg:mt-5 md:mt-4 mt-3">
+                <Link to={`/pokemon/${pokemon?.id}`} className="xl:text-base text-sm text-[#A21D3C] hover:bg-[#A21D3C] hover:text-white font-medium border-2 border-[#A21D3C] xl:px-4 px-3 py-1 rounded-xl">
                     Details
                 </Link>
-                <button onClick={handleFavorite} className="text-[#A21D3C] text-2xl">
+                <button onClick={handleFavorite} className="text-[#A21D3C] xl:text-2xl text-xl">
                     {isFavorite(pokemon?.id) ? <FaHeart /> : <FaRegHeart />}
                 </button>
             </div>
