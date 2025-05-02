@@ -30,9 +30,9 @@ const RandomPokemon = () => {
             {error && <p className="italic text-center xl:h-[550px] lg:h-[400px] md:h-[500px] h-[300px] flex justify-center items-center font-semibold xl:text-2xl md:text-xl text-lg text-red-500">{error}</p>}
 
             {randomPokemon && (
-                <div className="flex flex-col xl:gap-5 items-center lg:gap-3 md:gap-3 mt-6">
+                <div className="flex flex-col xl:gap-5 items-center lg:gap-3 md:gap-3 xl:my-10 mt-6">
                     <div className='flex items-center justify-center xl:gap-8 lg:gap-7 md:gap-6 gap-1'>
-                        <div className='w-full'>
+                        <div className='md:w-auto w-full'>
                             <img
                                 src={randomPokemon?.sprites?.front_default}
                                 alt={randomPokemon?.name}
@@ -45,7 +45,7 @@ const RandomPokemon = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className='w-full flex flex-col md:gap-3 gap-2 xl:text-lg md:text-base text-sm'>
+                        <div className='md:w-auto w-full flex flex-col md:gap-3 gap-2 xl:text-lg md:text-base text-sm'>
                             <p><span className='font-semibold'>ID: </span>{randomPokemon?.id}</p>
                             <p><span className='font-semibold'>Height: </span>{randomPokemon?.height}</p>
                             <p><span className='font-semibold'>Weight: </span>{randomPokemon?.weight}</p>
@@ -54,24 +54,6 @@ const RandomPokemon = () => {
                             </p>
                         </div>
                     </div>
-                    {/* <div className='grid md:grid-cols-2 grid-cols-1 xl:gap-56 lg:gap-44 gap-3 md:mt-0 mt-3'>
-                        <p className='xl:text-xl md:text-lg text-base'><span className='font-semibold'>Stats: </span>
-                            <ul className="list-disc list-inside flex flex-col gap-2 lg:mt-3 md:mt-[9px] mt-2">
-                                {randomPokemon?.stats?.map((stat) => (
-                                    <li key={stat?.stat?.name}>
-                                        {stat?.stat?.name}: {stat?.base_stat}
-                                    </li>
-                                ))}
-                            </ul>
-                        </p>
-                        <p className='xl:text-xl md:text-lg text-base'><span className='font-semibold'>Moves: </span>
-                            <ul className="list-disc list-inside flex flex-col gap-2 lg:mt-3 md:mt-[9px] mt-2">
-                                {randomPokemon?.moves.slice(0, 5).map((move) => (
-                                    <li key={move?.move?.name}>{move?.move?.name}</li>
-                                ))}
-                            </ul>
-                        </p>
-                    </div> */}
                 </div>
             )}
         </div>
