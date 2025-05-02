@@ -13,8 +13,8 @@ const PokemonDetail = () => {
     const { addFavorite, removeFavorite, isFavorite } = useFavorites();
 
     const handleFavorite = () => {
-        if (isFavorite(pokemon.id)) {
-            removeFavorite(pokemon.id);
+        if (isFavorite(pokemon?.id)) {
+            removeFavorite(pokemon?.id);
         } else {
             addFavorite(pokemon);
         }
@@ -23,18 +23,18 @@ const PokemonDetail = () => {
         const fetchPokemonDetail = async () => {
             try {
                 const res = await baseAPI.get(`pokemon/${id}`);
-                setPokemon(res.data);
+                setPokemon(res?.data);
 
                 const speciesRes = await baseAPI.get(`pokemon-species/${id}`);
                 const evolutionRes = await baseAPI.get(
-                    speciesRes.data.evolution_chain.url
+                    speciesRes?.data?.evolution_chain?.url
                 );
                 const chain = [];
-                let current = evolutionRes.data.chain;
+                let current = evolutionRes?.data?.chain;
                 do {
                     chain.push(current.species.name);
                     current = current.evolves_to[0];
-                } while (current && current.hasOwnProperty('evolves_to'));
+                } while (current && current?.hasOwnProperty('evolves_to'));
                 setEvolutionChain(chain);
                 setLoading(false);
             } catch (error) {
@@ -53,7 +53,7 @@ const PokemonDetail = () => {
                 <img
                     src={pokemon?.sprites?.front_default}
                     alt={pokemon?.name}
-                    className="mx-auto xl:w-60 xl:h-60 lg:w-54 lg:h-54 md:w-52 md:h-52 w-44 h-44"
+                    className="mx-auto xl:w-60 xl:h-60 lg:w-54 lg:h-54 md:w-52 md:h-52 w-44 h-44 border-2 border-[#A21D3C] rounded-xl xl:p-2 lg:p-3 p-2 mb-4 bg-white shadow-md"
                 />
                 <div className='flex justify-center items-center lg:gap-5 md:gap-4 gap-3 mb-4'>
                     <h2 className="xl:text-3xl lg:text-2xl text-xl font-bold capitalize text-center">{pokemon?.name}</h2>

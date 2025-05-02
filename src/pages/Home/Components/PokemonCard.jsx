@@ -7,8 +7,8 @@ const PokemonCard = ({ pokemon }) => {
     const { addFavorite, removeFavorite, isFavorite } = useFavorites();
 
     const handleFavorite = () => {
-        if (isFavorite(pokemon.id)) {
-            removeFavorite(pokemon.id);
+        if (isFavorite(pokemon?.id)) {
+            removeFavorite(pokemon?.id);
         } else {
             addFavorite(pokemon);
         }
